@@ -15,8 +15,10 @@ function animate() {
 }
 
 function draw() {
+ $("#canvas").clearCanvas()
+
  $("#canvas").rotateCanvas({
-  angle: i++,
+  angle: 4*i++,
   x: 100, y: 100
 })
 .drawRect({
@@ -27,6 +29,8 @@ function draw() {
 .restoreCanvas();
 
  i=i%360;
+
+
 }
 
 animate();
